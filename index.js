@@ -7,7 +7,7 @@ const Triangle = shapes.Triangle;
 const Square = shapes.Square;
 
 const generateSvg = ({ color, text, shape, backgroundcolor }) => {
-    let svgContent = `<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">`
+    let svgContent = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">`
 
     shape.forEach(selectedShape => {
         let shapeSvg;
@@ -17,11 +17,11 @@ const generateSvg = ({ color, text, shape, backgroundcolor }) => {
                 shapeSvg = `<polygon points="${triangle.x},${triangle.y} ${triangle.x + triangle.width},${triangle.y + triangle.height} ${triangle.x - triangle.width},${triangle.y + triangle.height}" fill="${backgroundcolor}" />`;
                 break;
             case 'circle':
-                const circle = new Circle(500, 500, 300);
-                shapeSvg = `<circle cx="${circle.cx}" cy="${circle.cy}" r="${circle.radius}" fill="${backgroundcolor}" />`;
+                const circle = new Circle(150, 100, 80);
+                shapeSvg = `<circle cx="${circle.x}" cy="${circle.y}" r="${circle.radius}" stroke="black" stroke-width="5" fill="${backgroundcolor}" />`;
                 break;
             case 'square':
-                const square = new Square(0, 0, 250, 250);
+                const square = new Square(0, 0, 20, 20);
                 shapeSvg = `<rect x="${square.x}" y="${square.y}" width="${square.width}" height="${square.height}" fill="${backgroundcolor}" />`;
                 break;
             default:
