@@ -21,7 +21,7 @@ const generateSvg = ({ color, text, shape, backgroundcolor }) => {
                 shapeSvg = `<circle cx="${circle.x}" cy="${circle.y}" r="${circle.radius}" stroke="black" stroke-width="5" fill="${backgroundcolor}" />`;
                 break;
             case 'square':
-                const square = new Square(0, 0, 20, 20);
+                const square = new Square(0, 0, 200, 200);
                 shapeSvg = `<rect x="${square.x}" y="${square.y}" width="${square.width}" height="${square.height}" fill="${backgroundcolor}" />`;
                 break;
             default:
@@ -64,6 +64,6 @@ inquirer
         const svgContent = generateSvg(answers);
 
         writeFile('logo.svg', svgContent)
-            .then(() => console.log('Successfully created logo.svg!'))
+            .then(() => console.log('Generated logo.svg!'))
             .catch((err) => console.error(err));
     });
