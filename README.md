@@ -16,4 +16,4 @@ the app can be used as an simple at this stage for generating logo for companies
 you can check the application repo at my github account at :  https://github.com/Mahdi-matty/svg-generator.git
 
 ##### Display :
-click the link and see a display of test and using the aplication :  
+click the link and see a display of test and using the aplication :  https://drive.google.com/file/d/1UOmhgdCPqVoe0dcVWY5AsIKH5kG0XMZU/view
